@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyZurich</string>
+    <string name="button_text">Click Me!!!</string>
+    <id name="button_id">1234</id>
 </resources>
