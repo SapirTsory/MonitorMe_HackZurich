@@ -2,6 +2,12 @@
     <string name="app_name">MyZurich</string>
     <string name="button_post">Post results</string>
     <string name="button_get">Get results</string>
+    <string name="how_much_sleep_hint">How much sleep?</string>
+    <string name="how_much_water_hint">How much water?</string>
+    <string name="how_much_pain_hint">How much pain?</string>
     <id name="post_id">1234</id>
     <id name="view_id">1233</id>
+    <id name="water">1233</id>
+    <id name="pain">1233</id>
+    <id name="sleep">1233</id>
 </resources>

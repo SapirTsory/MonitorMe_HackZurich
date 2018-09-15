@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         postRequest();
         getRequest();
 
-
     }
 
     void postRequest()
@@ -116,8 +115,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
 
 }
 
