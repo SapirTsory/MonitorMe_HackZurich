@@ -13,9 +13,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MainActivity extends AppCompatActivity {
 
 
@@ -24,20 +21,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button button = findViewById(R.id.button_id);
-        button.setOnClickListener(new View.OnClickListener() {
+        postRequest();
+        getRequest();
+
+
+    }
+
+    void postRequest()
+    {
+        final Button post_button = findViewById(R.id.post_id);
+        post_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                System.out.println("daria linor sapir hahaha");
+                System.out.println("This is a post");
                 final TextView mTextView = (TextView) findViewById(R.id.text);
 
                 // Instantiate the RequestQueue.
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 String url ="https://script.google.com/macros/s/AKfycby_J-YAi-S4DdH2WSwMOB3SjOzIqWCYqRC1fEg2ddkNJroOXiF6/exec?";
 
-                //TODO --- get (and then post) --- to public google sheet
-                String sleep = "5";
-                String pain = "55";
-                String water = "555";
+                String sleep = "7";
+                String pain = "77";
+                String water = "777";
 
                 url = url + "sleep=" + sleep + "&pain=" + pain + "&water=" + water;
 
@@ -48,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(String response) {
                                 // Display the first 500 characters of the response string.
-                                System.out.println("response:" + response.substring(0,500));
+                                System.out.println("response" + response.toString());
                             }
                         },
 
@@ -64,13 +68,54 @@ public class MainActivity extends AppCompatActivity {
 
                 // Add the request to the RequestQueue.
                 queue.add(stringRequest);
-                System.out.println("done sending request");
+                System.out.println("done POST");
 
 
             }
         });
     }
 
+    void getRequest()
+    {
+        final Button post_button = findViewById(R.id.view_id);
+        post_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("This is a GET");
+                final TextView mTextView = (TextView) findViewById(R.id.text);
+
+                // Instantiate the RequestQueue.
+                RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+                String url ="https://script.google.com/macros/s/AKfycby_J-YAi-S4DdH2WSwMOB3SjOzIqWCYqRC1fEg2ddkNJroOXiF6/exec";
+
+                // Request a string response from the provided URL.
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                        new Response.Listener<String>()
+                        {
+                            @Override
+                            public void onResponse(String response) {
+                                // Display the first 500 characters of the response string.
+                                System.out.println("response" + response.toString());
+                            }
+                        },
+
+                        new Response.ErrorListener()
+                        {
+                            @Override
+                            public void onErrorResponse(VolleyError error)
+                            {
+                                System.out.println("That didn't work!!!");
+                            }
+                        });
+
+
+                // Add the request to the RequestQueue.
+                queue.add(stringRequest);
+                System.out.println("done GET");
+
+
+            }
+        });
+    }
 
 
 
