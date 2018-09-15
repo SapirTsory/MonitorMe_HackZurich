@@ -32,12 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
                 // Instantiate the RequestQueue.
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url ="https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=1x5Ej14fWb2-4vXHG3rdboMSxybAUUTlAkvcfvQlPPOI&sheet=Sheet1";
+                String url ="https://script.google.com/macros/s/AKfycby_J-YAi-S4DdH2WSwMOB3SjOzIqWCYqRC1fEg2ddkNJroOXiF6/exec?";
 
                 //TODO --- get (and then post) --- to public google sheet
+                String sleep = "5";
+                String pain = "55";
+                String water = "555";
+
+                url = url + "sleep=" + sleep + "&pain=" + pain + "&water=" + water;
 
                 // Request a string response from the provided URL.
-                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>()
                         {
                             @Override
