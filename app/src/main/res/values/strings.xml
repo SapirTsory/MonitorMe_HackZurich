@@ -1,13 +1,23 @@
 <resources>
-    <string name="app_name">MyZurich</string>
+    <string name="app_name">MonitorMe</string>
     <string name="button_post">Post results</string>
     <string name="button_get">Get results</string>
-    <string name="how_much_sleep_hint">How much sleep?</string>
-    <string name="how_much_water_hint">How much water?</string>
-    <string name="how_much_pain_hint">How much pain?</string>
+    <string name="how_long_was_the_attack_hint">How long was the attack?(Hours)</string>
+    <string name="intensity_hint">How intense was the pain(1-10)?</string>
+    <string name="stress_level_hint">Rate stress level(1-10)</string>
+    <string name="sleep_duration_hint">Sleep duration(Hours)</string>
+    <string name="Alcohol">Alcohol</string>
+    <string name="Coffee">Coffee</string>
+    <string name="Cheese">Cheese</string>
+    <string name="Chocolate">Chocolate</string>
     <id name="post_id">1234</id>
     <id name="view_id">1233</id>
-    <id name="water">1233</id>
-    <id name="pain">1233</id>
-    <id name="sleep">1233</id>
+    <id name="Pain_Duration">2</id>
+    <id name="Pain_Intensity">1</id>
+    <id name="Stress_Level">3</id>
+    <id name="Sleep_Duration">4</id>
+    <id name="Alcohol">5</id>
+    <id name="Coffee">6</id>
+    <id name="Cheese">7</id>
+    <id name="Chocolate">8</id>
 </resources>

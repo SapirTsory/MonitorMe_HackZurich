@@ -38,23 +38,60 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/sleep"
+                    android:id="@+id/Pain_Duration"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/how_much_sleep_hint"
+                    android:hint="@string/how_long_was_the_attack_hint"
                     android:inputType="number" />
                 <EditText
-                    android:id="@+id/pain"
+                    android:id="@+id/Pain_Intensity"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/how_much_pain_hint"
+                    android:hint="@string/intensity_hint"
                     android:inputType="number" />
                 <EditText
-                    android:id="@+id/water"
+                    android:id="@+id/Stress_Level"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/how_much_water_hint"
+                    android:hint="@string/stress_level_hint"
                     android:inputType="number" />
+                <EditText
+                    android:id="@+id/Sleep_Duration"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sleep_duration_hint"
+                    android:inputType="number" />
+                <LinearLayout
+                    android:id="@+id/LinearLayout04"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Alcohol"
+                        android:text="@string/Alcohol"
+                        android:onClick="onCeckboxClicked" />
+                    <CheckBox
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Coffee"
+                        android:text="@string/Coffee"
+                        android:onClick="onCeckboxClicked" />
+                    <CheckBox
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Cheese"
+                        android:text="@string/Cheese"
+                        android:onClick="onCeckboxClicked" />
+                    <CheckBox
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Chocolate"
+                        android:text="Chocolate"
+                        android:onClick="onCeckboxClicked" />
+                </LinearLayout>
                 <Button
                     android:id="@+id/post_id"
                     android:layout_width="wrap_content"
