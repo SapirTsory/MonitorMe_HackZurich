@@ -3,6 +3,7 @@
 
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,16 +21,40 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <LinearLayout
-                android:id="@+id/LinearLayout02"
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent">
-                <Button
-                    android:id="@+id/view_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/button_get"/>
-            </LinearLayout>
+                app:srcCompat="@drawable/icon"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/notification_large_icon_width"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:shadowColor="@android:color/darker_gray"
+                android:text="Join us to prevent your next attack and improve your wellbeing"
+                android:textColor="@android:color/background_light"
+                android:textColorHighlight="@android:color/darker_gray"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColorLink="@android:color/darker_gray"
+                android:textSize="18sp"
+                tools:textColorHint="@android:color/darker_gray" />
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/notification_large_icon_width"
+                android:background="#3f51b5"
+                android:gravity="center"
+                android:text="Report"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp" />
 
             <LinearLayout
                 android:id="@+id/LinearLayout03"
@@ -42,7 +67,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/how_long_was_the_attack_hint"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textColorLink="@android:color/holo_blue_light" />
                 <EditText
                     android:id="@+id/Pain_Intensity"
                     android:layout_width="fill_parent"
@@ -66,6 +92,14 @@
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#3f51b5"
+                        android:gravity="center"
+                        android:text="Recently consumed"
+                        android:textColor="@android:color/background_light" />
 
                     <CheckBox
                         android:layout_width="fill_parent"
@@ -85,12 +119,16 @@
                         android:id="@+id/Cheese"
                         android:text="@string/Cheese"
                         android:onClick="onCeckboxClicked" />
+
                     <CheckBox
+                        android:id="@+id/Chocolate"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Chocolate"
+                        android:onClick="onCeckboxClicked"
                         android:text="Chocolate"
-                        android:onClick="onCeckboxClicked" />
+                        android:textColorLink="@android:color/holo_blue_light" />
+
+
                 </LinearLayout>
                 <Button
                     android:id="@+id/post_id"
@@ -104,5 +142,7 @@
         </LinearLayout>
 
     </ScrollView>
+
+
 
 </android.support.constraint.ConstraintLayout>
