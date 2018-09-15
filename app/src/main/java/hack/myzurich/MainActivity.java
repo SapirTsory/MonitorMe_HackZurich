@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -32,15 +33,20 @@ public class MainActivity extends AppCompatActivity {
         post_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("This is a post");
-                final TextView mTextView = (TextView) findViewById(R.id.text);
+
+                EditText sleep_input = (EditText)findViewById(R.id.sleep);
+                EditText pain_input = (EditText)findViewById(R.id.pain);
+                EditText water_input = (EditText)findViewById(R.id.water);
+
+                String sleep = sleep_input.getText().toString();
+                String pain = pain_input.getText().toString();
+                String water = water_input.getText().toString();
+
+                System.out.println("input: " + sleep + pain + water);
 
                 // Instantiate the RequestQueue.
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 String url ="https://script.google.com/macros/s/AKfycby_J-YAi-S4DdH2WSwMOB3SjOzIqWCYqRC1fEg2ddkNJroOXiF6/exec?";
-
-                String sleep = "7";
-                String pain = "77";
-                String water = "777";
 
                 url = url + "sleep=" + sleep + "&pain=" + pain + "&water=" + water;
 
