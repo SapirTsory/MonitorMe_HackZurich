@@ -41,7 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:autoSizeTextType="uniform"
-                    android:text="  It's looks like you need 6-8 hours of sleep" />
+                    android:text="  It looks like you need 6-8 hours of sleep" />
             </LinearLayout>
 
             <LinearLayout
@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:autoSizeTextType="uniform"
-                    android:text="  It's looks like you need more chocolate!"
+                    android:text="  It looks like you need more chocolate!"
                     />
 
             </LinearLayout>
