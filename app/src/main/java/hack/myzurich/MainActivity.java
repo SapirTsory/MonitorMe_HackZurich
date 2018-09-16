@@ -1,5 +1,6 @@
 package hack.myzurich;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -75,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 queue.add(stringRequest);
                 System.out.println("done POST");
+
+                Intent myIntent = new Intent(MainActivity.this,
+                        graphs.class);
+                startActivity(myIntent);
             }
         });
     }

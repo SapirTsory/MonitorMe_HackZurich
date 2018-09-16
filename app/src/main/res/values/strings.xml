@@ -12,6 +12,7 @@
     <string name="Chocolate">Chocolate</string>
     <id name="post_id">1234</id>
     <id name="view_id">1233</id>
+    <id name="view_id2">1238</id>
     <id name="Pain_Duration">2</id>
     <id name="Pain_Intensity">1</id>
     <id name="Stress_Level">3</id>
